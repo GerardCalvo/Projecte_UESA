@@ -27,11 +27,11 @@ export const Header = () => {
         </div>
       </div>
 
-      <nav className="bg-[#0b419b] text-[#ffcc00] font-semibold text-[14px] tracking-wider">
+      <nav className="bg-[#0b419b] text-[#ffcc00] font-semibold text-[14px] tracking-wider relative z-50">
         <ul className="flex justify-center gap-16 py-2">
           <li className="relative group cursor-pointer">
             <span>Club</span>
-            <ul className="absolute left-0 top-full hidden group-hover:block bg-[#0b419b]/90 p-3 w-44 space-y-2 text-[13px] text-[#ffcc00] shadow">
+            <ul className="absolute left-0 top-full hidden group-hover:block bg-[#0b419b]/90 p-3 w-44 space-y-2 text-[13px] text-[#ffcc00] shadow z-50">
               <li className="hover:underline">Història</li>
               <li className="hover:underline">Himne</li>
               <li className="hover:underline">Càntics</li>
@@ -43,7 +43,7 @@ export const Header = () => {
           </li>
           <li className="relative group cursor-pointer">
             <span>Temporada</span>
-            <ul className="absolute left-0 top-full hidden group-hover:block bg-[#0b419b]/90 p-3 w-44 space-y-2 text-[13px] text-[#ffcc00] shadow">
+            <ul className="absolute left-0 top-full hidden group-hover:block bg-[#0b419b]/90 p-3 w-44 space-y-2 text-[13px] text-[#ffcc00] shadow z-50">
               <li className="hover:underline">Calendari</li>
               <li className="hover:underline">Classificació</li>
               <li className="hover:underline">Resultats</li>
