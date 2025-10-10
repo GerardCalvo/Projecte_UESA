@@ -2,24 +2,50 @@ import { useState } from "react";
 
 export const Noticies = () => {
   const noticies = [
-    { id: 1, titol: "El CD Teruel, rival a la primera eliminatòria de la Copa del Rei", img: "./src/assets/aficio.jpg", data: "6 d’octubre de 2025", descripcio:"El Sant Andreu rebrà el CD Teruel en la primera eliminatòria de la Copa del Rei, a partit únic. El partit es jugarà el dia 28, 29 o 30 d’octubre i aviat s’informarà dels preus i condicions del procés de venda d’entrades.",},
-    { id: 2, titol: "Victòria important a casa davant el Vilafranca", img: "./src/assets/aficio.jpg", data: "30 de setembre de 2025", descripcio: "Els quadribarrats van aconseguir una victòria treballada..." },
-    { id: 3, titol: "El Juvenil A empata a camp del líder", img: "./src/assets/aficio.jpg", data: "28 de setembre de 2025", descripcio: "El Juvenil A suma un punt valuós després d’un partit molt complet..." },
-    { id: 4, titol: "Entrenaments oberts aquesta setmana al Narcís Sala", img: "./src/assets/aficio.jpg", data: "25 de setembre de 2025", descripcio: "Entrenaments oberts al públic amb activitats per als socis..." },
-    { id: 5, titol: "Nou acord de patrocini amb Ògel", img: "./src/assets/aficio.jpg", data: "20 de setembre de 2025", descripcio: "L’acord reforça el projecte esportiu i social del club..." },
-    { id: 6, titol: "Portes obertes del Futbol Base", img: "./src/assets/aficio.jpg", data: "18 de setembre de 2025", descripcio: "Sessions gratuïtes per a infants i joves al Narcís Sala..." },
-    { id: 7, titol: "Convocatòria d’assemblea de socis", img: "./src/assets/aficio.jpg", data: "15 de setembre de 2025", descripcio: "Ordre del dia i informació per a la participació de socis..." },
-    { id: 8, titol: "Renovació del capità", img: "./src/assets/aficio.jpg", data: "10 de setembre de 2025", descripcio: "El capità renova una temporada més amb el primer equip..." },
+    {
+      id: 1,
+      titol:
+        "El CD Teruel, rival a la primera eliminatòria de la Copa del Rei",
+      img: "./src/assets/aficio.jpg",
+      data: "6 d’octubre de 2025",
+      descripcio:
+        "El Sant Andreu rebrà el CD Teruel en la primera eliminatòria de la Copa del Rei, a partit únic.",
+    },
+    {
+      id: 2,
+      titol: "Victòria important a casa davant el Vilafranca",
+      img: "./src/assets/aficio.jpg",
+      data: "30 de setembre de 2025",
+      descripcio:
+        "Els quadribarrats van aconseguir una victòria treballada davant el Vilafranca.",
+    },
+    {
+      id: 3,
+      titol: "El Juvenil A empata a camp del líder",
+      img: "./src/assets/aficio.jpg",
+      data: "28 de setembre de 2025",
+      descripcio:
+        "El Juvenil A suma un punt valuós després d’un partit molt complet i competitiu.",
+    },
+    {
+      id: 4,
+      titol: "Entrenaments oberts aquesta setmana al Narcís Sala",
+      img: "./src/assets/aficio.jpg",
+      data: "25 de setembre de 2025",
+      descripcio:
+        "Durant tota la setmana, el primer equip realitzarà entrenaments oberts al públic.",
+    },
+    {
+      id: 5,
+      titol: "Nou acord de patrocini amb Ògel",
+      img: "./src/assets/aficio.jpg",
+      data: "20 de setembre de 2025",
+      descripcio:
+        "L’acord reforça el projecte esportiu i social del club amb noves iniciatives conjuntes.",
+    },
   ];
 
   const [visible, setVisible] = useState(4);
-
-  const handleMostraMes = () => {
-    setVisible((v) => Math.min(v + 4, noticies.length));
-    // Opcional: desplaçar una mica cap avall després d’afegir més
-    // setTimeout(() => window.scrollBy({ top: 300, behavior: "smooth" }), 0);
-  };
-
   const hiHaMes = visible < noticies.length;
 
   return (
@@ -30,42 +56,67 @@ export const Noticies = () => {
           <span className="absolute left-0 -bottom-1 h-[3px] w-full bg-[#FFCC00]" />
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
           {noticies.slice(0, visible).map((n) => (
             <a
               key={n.id}
               href={`/noticia/${n.id}`}
-              className="flex flex-col sm:flex-row gap-6 group border-b border-[#0B419B]/10 pb-6 hover:bg-[#f9fafb] transition"
+              className="group relative w-[300px] h-[200px] rounded-[10px] overflow-hidden shadow-[0_0_0_5px_#ffffff80] transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-105 hover:shadow-[0_8px_16px_rgba(255,255,255,0.2)]"
+              style={{ perspective: "1000px" }}
             >
-              <div className="flex-1">
-                <h3 className="text-[#0B419B] font-bold text-lg mb-2 group-hover:underline">
-                  {n.titol}
-                </h3>
-                <p className="text-[#FFCC00] text-sm mb-3">{n.data}</p>
-                <p className="text-[#4d4d4d] text-sm leading-relaxed">
-                  {n.descripcio}
-                </p>
-              </div>
-              <div className="sm:w-[45%] aspect-video overflow-hidden rounded-md shadow-sm">
+              <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:[transform:rotateX(90deg)]">
                 <img
                   src={n.img}
                   alt={n.titol}
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition"
+                  className="w-full h-full object-cover"
                 />
+              </div>
+
+              <div className="absolute inset-0 p-5 bg-[#f2f2f2] [transform:rotateX(-90deg)] origin-bottom transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:[transform:rotateX(0deg)] [backface-visibility:hidden]">
+                <p className="m-0 text-[20px] text-[#333] font-bold leading-tight line-clamp-2">
+                  {n.titol}
+                </p>
+                <p className="mt-1 text-[12px] text-[#FFCC00]">{n.data}</p>
+                <p className="mt-2 text-[14px] text-[#777] leading-[1.4] line-clamp-3">
+                  {n.descripcio}
+                </p>
               </div>
             </a>
           ))}
         </div>
 
+        {/* Botó actualitzat */}
         {hiHaMes && (
           <div className="flex justify-center mt-10">
             <button
-              onClick={handleMostraMes}
-              className="px-6 py-2 rounded-md font-semibold transition hover:opacity-90"
-              style={{ backgroundColor: "#0B419B", color: "#FFCC00" }}
-              aria-label="Mostra més notícies"
+              onClick={() =>
+                setVisible((v) => Math.min(v + 4, noticies.length))
+              }
+              className={`
+                relative inline-flex items-center justify-center font-medium text-[18px] tracking-wide
+                rounded-[0.8em] cursor-pointer overflow-hidden select-none transition-transform active:scale-95
+                text-[#FFCC00] bg-white border-2 border-[#0B419B]
+                before:content-[''] before:absolute before:top-0 before:left-0 before:w-[120%] before:h-full before:-translate-x-[10%]
+                before:bg-[#0B419B] before:skew-x-[30deg]
+                before:transition-transform before:duration-[400ms] before:[transition-timing-function:cubic-bezier(0.3,1,0.8,1)]
+                hover:before:translate-x-[100%]
+                hover:text-[#0B419B]
+              `}
             >
-              Mostra més
+              <span className="relative z-10 flex items-center gap-2 px-5 py-3 transition-colors duration-300">
+                <svg
+                  className="w-[1.2em] h-[1.2em]"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                Mostra més
+              </span>
             </button>
           </div>
         )}
