@@ -45,7 +45,7 @@ export const Footer = () => {
                   16:00 - 19:00
                 </div>
               </div>
-              <div className="flex items-start gap-2 mt-1 justify-center md:justify-start">
+              <a href="https://www.google.com/maps/place/Uni%C3%B3+Esportiva+Sant+Andreu/@41.4288812,2.1926311,15z/data=!4m6!3m5!1s0x12a4bcd04cd88023:0xd17cfc5a50d67e92!8m2!3d41.4288812!4d2.1926311!16s%2Fg%2F11g0hmplyy?entry=ttu&g_ep=EgoyMDI1MTAwNy4wIKXMDSoASAFQAw%3D%3D"><div className="flex items-start gap-2 mt-1 justify-center md:justify-start">
                 <img
                   src="../src/assets/location.svg"
                   alt="Adreça"
@@ -56,37 +56,18 @@ export const Footer = () => {
                   <br />
                   08030 Barcelona
                 </div>
-              </div>
+              </div></a>
             </div>
           </div>
 
           <div className="flex gap-4 mt-6 md:mt-0 justify-center md:justify-end w-full">
-            <img
-              src="../src/assets/message.svg"
-              alt="Chat"
-              className="h-5 w-5 text-[#ffcc00] fill-[#ffcc00]"
-            />
-            <img
-              src="../src/assets/youtube.svg"
-              alt="YouTube"
-              className="h-5 w-5 text-[#ffcc00] fill-[#ffcc00]"
-            />
-            <img
-              src="../src/assets/instagram.svg"
-              alt="Instagram"
-              className="h-5 w-5 text-[#ffcc00] fill-[#ffcc00]"
-            />
-            <img
-              src="../src/assets/twitter.svg"
-              alt="Twitter"
-              className="h-5 w-5 text-[#ffcc00] fill-[#ffcc00]"
-            />
-            <img
-              src="../src/assets/twitch.svg"
-              alt="Twitch"
-              className="h-5 w-5 text-[#ffcc00] fill-[#ffcc00]"
-            />
+            <a href="https://www.facebook.com/uesaoficial"><img src="../src/assets/facebook.svg" alt="Chat" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+            <a href="https://www.youtube.com/c/santandreu"><img src="../src/assets/youtube.svg" alt="YouTube" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+            <a href="https://www.instagram.com/uesantandreu/"><img src="../src/assets/instagram.svg" alt="Instagram" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+            <a href="https://x.com/uesantandreu"><img src="../src/assets/twitter.svg" alt="Twitter" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+            <a href="https://www.whatsapp.com/channel/0029VaCi5DLKAwEoqarYnl0g"><img src="../src/assets/message.svg" alt="Message" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
           </div>
+
         </div>
       </div>
     </footer>

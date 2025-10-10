@@ -17,11 +17,11 @@ export const Header = () => {
             <a href="Contacte.html" className="text-[11px] text-[#4d4d4d] hover:underline mb-1">Contacte</a>
             <div className="h-[3px] bg-[#ffcc00] w-20 mb-1"></div>
             <div className="flex items-center gap-2 mt-[2px]">
-              <img src="../src/assets/message.svg" alt="Chat" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" />
-              <img src="../src/assets/youtube.svg" alt="YouTube" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" />
-              <img src="../src/assets/instagram.svg" alt="Instagram" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" />
-              <img src="../src/assets/twitter.svg" alt="Twitter" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" />
-              <img src="../src/assets/twitch.svg" alt="Twitch" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" />
+              <a href="https://www.facebook.com/uesaoficial"><img src="../src/assets/facebook.svg" alt="Chat" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]"/></a>
+              <a href="https://www.youtube.com/c/santandreu"><img src="../src/assets/youtube.svg" alt="YouTube" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+              <a href="https://www.instagram.com/uesantandreu/"><img src="../src/assets/instagram.svg" alt="Instagram" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+              <a href="https://x.com/uesantandreu"><img src="../src/assets/twitter.svg" alt="Twitter" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
+              <a href="https://www.whatsapp.com/channel/0029VaCi5DLKAwEoqarYnl0g"><img src="../src/assets/message.svg" alt="Message" className="h-4 w-4 text-[#0b419b] fill-[#0b419b]" /></a>
             </div>
           </div>
         </div>
