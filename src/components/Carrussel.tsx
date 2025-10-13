@@ -36,7 +36,6 @@ export const Carrussel = () => {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* punts de control */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {imatges.map((_, i) => (
             <button
@@ -52,12 +51,10 @@ export const Carrussel = () => {
           ))}
         </div>
 
-        {/* títol */}
         <div className="absolute left-12 bottom-[75%] z-10 text-white text-3xl font-bold drop-shadow-lg">
           <h2>{imatges[index].titol}</h2>
         </div>
 
-        {/* BOTÓ estil personalitzat */}
         <div className="absolute left-12 bottom-[50%] z-10 text-3xl font-bold drop-shadow-lg">
           <a
             href="#"

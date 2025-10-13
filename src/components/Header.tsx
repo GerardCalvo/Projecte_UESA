@@ -39,7 +39,7 @@ export const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="hover:underline">Plantilla</a>
+            <a href="" className="hover:underline">Plantilla</a>
           </li>
           <li className="relative group cursor-pointer">
             <span>Temporada</span>
@@ -50,7 +50,7 @@ export const Header = () => {
             </ul>
           </li>
           <li>
-            <a href="#" className="hover:underline">Botiga</a>
+            <a href="" className="hover:underline">Botiga</a>
           </li>
         </ul>
       </nav>
