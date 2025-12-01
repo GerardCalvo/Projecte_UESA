@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "titol":
+        "El CD Teruel, rival a la primera eliminatòria de la Copa del Rei",
+      "img": "/assets/noticies/1.jpg",
+      "data": "6 d’octubre de 2025",
+      "descripcio":
+        "El Sant Andreu rebrà el CD Teruel en la primera eliminatòria de la Copa del Rei, a partit únic."
+    },
+    {
+      "id": 2,
+      "titol": "Victòria important a casa davant el Vilafranca",
+      "img": "/assets/noticies/2.jpg",
+      "data": "30 de setembre de 2025",
+      "descripcio":
+        "Els quadribarrats van aconseguir una victòria treballada davant el Vilafranca."
+    },
+    {
+      "id": 3,
+      "titol": "El Juvenil A empata a camp del líder",
+      "img": "/assets/noticies/3.jpg",
+      "data": "28 de setembre de 2025",
+      "descripcio":
+        "El Juvenil A suma un punt valuós després d’un partit molt complet i competitiu."
+    },
+    {
+      "id": 4,
+      "titol": "Entrenaments oberts aquesta setmana al Narcís Sala",
+      "img": "/assets/noticies/4.jpg",
+      "data": "25 de setembre de 2025",
+      "descripcio":
+        "Durant tota la setmana, el primer equip realitzarà entrenaments oberts al públic."
+    },
+    {
+      "id": 5,
+      "titol": "Nou acord de patrocini amb Ògel",
+      "img": "/assets/noticies/5.jpg",
+      "data": "20 de setembre de 2025",
+      "descripcio":
+        "L’acord reforça el projecte esportiu i social del club amb noves iniciatives conjuntes."
+    }
+]

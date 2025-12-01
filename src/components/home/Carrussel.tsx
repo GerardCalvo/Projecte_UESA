@@ -3,22 +3,22 @@ import { useState } from "react";
 export const Carrussel = () => {
   const imatges = [
     {
-      src: "./src/assets/aficio.jpg",
+      src: "./src/assets/img/aficio.jpg",
       titol: "L’orgull del poble des de 1909",
       textBot: "Càntics",
     },
     {
-      src: "./src/assets/narcis-sala.jpg",
+      src: "./src/assets/img/narcis-sala.jpg",
       titol: "El nostre estadi, casa i història",
       textBot: "Instal·lacions",
     },
     {
-      src: "./src/assets/celebracio.jpg",
+      src: "./src/assets/img/celebracio.jpg",
       titol: "La força de l’equip, la passió de la gent",
       textBot: "Plantilla",
     },
     {
-      src: "./src/assets/aficio2.jpg",
+      src: "./src/assets/img/aficio2.jpg",
       titol: "Unió, cor i colors quadribarrats",
       textBot: "Classificació",
     },

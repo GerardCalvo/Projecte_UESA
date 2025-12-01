@@ -1,23 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-import { Carrussel } from './components/Carrussel'
-import { Noticies } from './components/Noticies'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Noticies } from "./pages/Noticies";
+import { Noticia } from "./pages/Noticia";
+import { Header } from "./components/common/Header";
+import { Footer } from "./components/common/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Header/>
-      <Carrussel/>
-      <Noticies/>
-      <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/noticies" element={<Noticies />} />
+        <Route path="/noticia/:id" element={<Noticia />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
