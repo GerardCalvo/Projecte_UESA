@@ -42,11 +42,7 @@ export const Carrussel = () => {
               key={i}
               onClick={() => setIndex(i)}
               aria-label={`Anar a la imatge ${i + 1}`}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === index
-                  ? "bg-white scale-125"
-                  : "bg-white/50 hover:bg-white/70"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all ${ i === index ? "bg-white scale-125" : "bg-white/50 hover:bg-white/70"}`}
             />
           ))}
         </div>

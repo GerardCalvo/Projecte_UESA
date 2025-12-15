@@ -9,7 +9,7 @@ import message from "../../assets/img/message.svg";
 
 export const Header = () => {
   return (
-    <>
+    <header className="header top-0 left-0 w-full">
       <style>{`body { font-family: 'Inter', sans-serif; }`}</style>
 
       <div className="bg-white">
@@ -96,6 +96,6 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   );
 };

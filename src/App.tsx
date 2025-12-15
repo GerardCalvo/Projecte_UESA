@@ -7,15 +7,19 @@ import { Footer } from "./components/common/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/noticies" element={<Noticies />} />
-        <Route path="/noticia/:id" element={<Noticia />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="min-h-screen flex flex-col">
+      <BrowserRouter>
+        <Header />
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/noticies" element={<Noticies />} />
+            <Route path="/noticia/:id" element={<Noticia />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
