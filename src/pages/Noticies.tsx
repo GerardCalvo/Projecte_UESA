@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import noticiesData from "../assets/db/noticies.json";
 
 interface Noticia {
@@ -22,7 +23,12 @@ export const Noticies = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {noticies.map((n) => (
-          <div key={n.id} className="bg-white rounded-lg shadow overflow-hidden">
+          <Link 
+            key={n.id}
+            to={`/noticia/${n.id}`}
+            className="bg-white rounded-lg shadow overflow-hidden cursor-pointer hover:shadow-lg transition-shadow block"
+            aria-label={`Veure noticia: ${n.titol}`}
+          >
             <img src={n.img} alt={n.titol} className="w-full h-48 object-cover" />
 
             <div className="p-5">
@@ -30,7 +36,7 @@ export const Noticies = () => {
               <p className="text-[#FFCC00] text-sm">{n.data}</p>
               <p className="mt-2 text-gray-600">{n.descripcio}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
