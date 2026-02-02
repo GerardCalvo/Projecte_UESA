@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin
+Disallow: /privat
+Allow: /
+
+Sitemap: https://www.uesantandreu.cat/sitemap.xml
